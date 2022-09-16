@@ -62,7 +62,7 @@ Booking Web App
 ## Additional Notes
 - i did't work with sql server becuase bad configration on my machin and thare is no time to figure out what is it 
 - i worked with mysql but i put the configration of sql serve database connection commented in .env,config\database.php files
-you can un cooment it and test it with your configration (i don't know if it will work) so please
+you can uncomment it and test it with your configration (i don't know if it will work) so please
 reviwe my work  with mysql 
 
    
