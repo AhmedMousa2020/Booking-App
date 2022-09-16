@@ -90,10 +90,17 @@ class BookingController extends Controller
             $room = Room::find($request->room_id);
             $type = $this->getRoomType($request->room_type);
             if($room->type == $type && $room->status == 1){
+                //update to new room
                 $room->booking_id = $request->booking_id;
                 $room->status = 0;
                 $room->save();
 
+                //edit booking discount price
+                $booking = Booking::find($request->booking_id);
+                $booking->discount_price = $room->price; 
+                $booking->save();
+
+                //empty old room
                 $old_room->status = 1;
                 $old_room->booking_id = 0;
                 $old_room->save();
@@ -163,7 +170,8 @@ class BookingController extends Controller
 
 
     public function delete(Request $request){
-        //$rooms = Room::where('customer_id',$request->customer_id)->get();
+        $customer = Customer::find($request->customer_id);
+        if($customer){
         $bookings = Booking::where('customer_id',$request->customer_id)->get();
         foreach($bookings as $booking){
             $room = Room::find($booking->room_id);
@@ -173,9 +181,11 @@ class BookingController extends Controller
         } 
         $booking->delete();
 
-        $customer = Customer::find($request->customer_id);
         $customer->delete();
         return response()->json('booking has been canceled');
+    }else{
+        return response()->json('no booking for this customer');
+    }
 
     }
 }
