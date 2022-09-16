@@ -26,24 +26,24 @@ Booking Web App
 ## Api's Notes
 
 - api link for postman collection
-  - your_serve\api\find //find availability for the selected time
+  - your_serve\api\find      //find availability for the selected time
     - Attributes: 
-      - start_date //eg.(2022-09-16)
-      - end_date  //eg.(2022-09-29)
-  - your_serve\api\booking  //book
+      - start_date           //eg.(2022-09-16)
+      - end_date             //eg.(2022-09-29)
+  - your_serve\api\booking   //book
     - Attributes
-      - user_id //employee who responsible for booking
+      - user_id              //employee who responsible for booking
       - customer_name
       - email
       - phone
       - hotel_id
       - branch_id
-      - room_type //eg.(single,double,suite)
+      - room_type           //eg.(single,double,suite)
       - room_number
-      - customers_room  // the number of customer in one room
+      - customers_room      // the number of customer in one room
       - start_date
       - end_date
-  - your_serve\api\update //update booking
+  - your_serve\api\update   //update booking
     - user_id
     - hotel_id
     - branch_id
