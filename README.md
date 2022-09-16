@@ -60,10 +60,7 @@ Booking Web App
 - admin-login: email => `admin@example.com` , password => `password`
 
 ## Additional Notes
-- i did't work with sql server becuase bad configration on my machin and thare is no time to figure out what is it 
-- i worked with mysql but i put the configration of sql serve database connection commented in .env,config\database.php files
-you can uncomment it and test it with your configration (i don't know if it will work) so please
-reviwe my work  with mysql 
+- i didn't work with sql server because bad configuration on my machine and there is no time to figure out what is iti worked with mysql but i put the configuration of sql server database connection commented in .env,config\database.php files you can uncomment it and test it with your configuration (i don't know if it will work) so please review my work with mysql
 
    
 
